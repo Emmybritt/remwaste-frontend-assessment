@@ -1,10 +1,8 @@
 # React + Vite Application README Setup
 
-cat << EOF > README.md
-
 # React + Vite Application
 
-This is a [React.js](https://react.dev/) project bootstrapped with [\`create-vite\`](https://github.com/vitejs/vite/tree/main/packages/create-vite).
+This is a [React.js](https://react.dev/) project bootstrapped with [`create-vite`](https://github.com/vitejs/vite/tree/main/packages/create-vite).
 
 ---
 
@@ -12,23 +10,23 @@ This is a [React.js](https://react.dev/) project bootstrapped with [\`create-vit
 
 ### 1. Install Project Dependencies
 
-\`\`\`bash
+```bash
 npm install
 
 # or
 
 yarn install
-\`\`\`
+```
 
 ### 2. Run the Development Server
 
-\`\`\`bash
+```bash
 npm run dev
 
 # or
 
 yarn dev
-\`\`\`
+```
 
 Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
@@ -42,8 +40,8 @@ This application optimizes perceived performance through **partial rendering**, 
 
 In this Vite + React setup:
 
-- **Static UI components** (e.g., \`Header\`, \`HeroSection\`) are rendered instantly.
-- **Dynamic components** (e.g., \`SelectSkipSection\`, which fetches external data) are rendered asynchronously after data becomes available.
+- **Static UI components** (e.g., `Header`, `HeroSection`) are rendered instantly.
+- **Dynamic components** (e.g., `SelectSkipSection`, which fetches external data) are rendered asynchronously after data becomes available.
 
 #### Benefits:
 
@@ -53,7 +51,7 @@ In this Vite + React setup:
 
 ### 🦴 Skeleton Loaders
 
-Skeleton loaders are used as fallback UIs for components like \`SelectSkipSection\` to:
+Skeleton loaders are used as fallback UIs for components like `SelectSkipSection` to:
 
 - Reduce Cumulative Layout Shift (CLS)
 - Improve perceived speed
@@ -63,7 +61,7 @@ Skeleton loaders are used as fallback UIs for components like \`SelectSkipSectio
 
 ## 🛠️ Error Handling
 
-Error handling is implemented using standard JavaScript \`try...catch\` blocks to gracefully handle asynchronous operations like API requests.
+Error handling is implemented using standard JavaScript `try...catch` blocks to gracefully handle asynchronous operations like API requests.
 
 This ensures that:
 
@@ -97,7 +95,7 @@ You can also deploy this app on:
 - **Heroku** – Use a static file server (e.g., Express) for SPA deployment
 - **EC2** – For manual or custom server deployments
 
-All these platforms support deploying Vite apps with a \`build\` script that outputs to the \`dist/\` directory.
+All these platforms support deploying Vite apps with a `build` script that outputs to the `dist/` directory.
 
 ---
 
@@ -107,7 +105,7 @@ All these platforms support deploying Vite apps with a \`build\` script that out
 
 - In Next.js version 13+, app routing was introduced as an alternative to page routing.
 - Also in the latest versions of Next.js, components are _Server Components_ by default.
-- Data fetching no longer uses \`getServerSideProps\`, \`getStaticProps\`, or \`getInitialProps\`. Instead, you fetch data directly in server components via async functions.
+- Data fetching no longer uses `getServerSideProps`, `getStaticProps`, or `getInitialProps`. Instead, you fetch data directly in server components via async functions.
 
 ---
 
