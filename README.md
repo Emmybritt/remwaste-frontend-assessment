@@ -97,16 +97,34 @@ You can also deploy this app on:
 
 All these platforms support deploying Vite apps with a `build` script that outputs to the `dist/` directory.
 
----
+## 🛠️ Key Features & Improvements
 
-## 📝 Notes
+Redesign Approach
+Layout: The skip selection page was restructured to create a more intuitive flow. The skip options were displayed in a more user-friendly manner, ensuring clarity and ease of selection.
 
-> ⚠️ The following notes are specific to **Next.js** and are **not applicable** to this React + Vite application. Please disregard if you're not working with Next.js:
+UI/UX: Colors, typography, and spacing were adjusted for better readability and alignment with modern UI trends. Buttons were made larger for better clickability on mobile.
 
-- In Next.js version 13+, app routing was introduced as an alternative to page routing.
-- Also in the latest versions of Next.js, components are _Server Components_ by default.
-- Data fetching no longer uses `getServerSideProps`, `getStaticProps`, or `getInitialProps`. Instead, you fetch data directly in server components via async functions.
+Interactivity: Added hover and focus effects for buttons to improve interactivity.
 
----
+Accessibility: The design is now more accessible, with sufficient color contrast and ARIA labels for form elements.
 
-EOF
+Clean & Maintainable React Code
+Component Structure: Components were broken down using the atomic design principle. We ensured that the components are reusable and easy to maintain.
+
+State Management: State is handled using React hooks like useState and useEffect, ensuring minimal boilerplate and clear separation of concerns.
+
+Error Handling: Implemented graceful error handling for asynchronous data fetching to ensure the page doesn't break in case of API failures.
+
+Responsiveness
+Mobile-First Design: The layout is designed to work seamlessly on both mobile and desktop devices. Media queries are used to adjust the layout based on screen size.
+
+Grid System: A flexible grid system is employed to ensure that the page scales well across different devices.
+
+Testing: The design has been tested on multiple devices to ensure that it is fully responsive and provides a consistent experience.
+
+UI/UX Enhancements
+Skeleton Loaders: Used skeleton loaders to improve the perceived loading speed for dynamic data fetching, ensuring a smooth user experience while waiting for the skips data.
+
+Asynchronous Data Loading: The skip options are fetched asynchronously, and loading states are managed to improve the user experience.
+
+Improved Visual Hierarchy: The typography and layout were improved to highlight key actions and make the selection process more intuitive.
