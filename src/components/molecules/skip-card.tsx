@@ -26,15 +26,21 @@ const SkipCard = ({
     <div
       onClick={() => handleSelectSkip(skipSizeData)}
       className={cn(
-        "border-2 bg-[#1c1c1c] glassy-card  cursor-pointer rounded-lg p-[1.5rem] relative hover:border-[#142975]",
+        "border-2 bg-[#1c1c1c] transition-all group glassy-card  cursor-pointer rounded-lg p-[1.5rem] relative hover:border-[#142975]",
         selectedSkipData?.id === skipSizeData.id ? "border-blue" : "border-grey"
       )}
     >
-      <p className="absolute bg-blue px-3 py-1 rounded-4xl text-sm font-semibold right-12 top-10">
-        {size} Yards
-      </p>
-      {(allowed_on_road || allows_heavy_waste) && (
-        <div className="absolute top-43 space-y-2">
+      <div className="relative">
+        <p className="absolute bg-blue px-3 py-1 rounded-4xl text-sm font-semibold right-2 top-2">
+          {size} Yards
+        </p>
+        <img
+          src={SkipImg}
+          alt="skipImg"
+          className="rounded-lg h-[210px] w-full object-cover"
+        />
+
+        <div className="absolute bottom-2 left-2 space-y-2">
           {allowed_on_road && (
             <div className="text-warning py-1 flex space-x-2 items-center bg-[#0c0c0c] text-xs rounded-sm px-2">
               <TriangleAlert size={15} />
@@ -49,12 +55,8 @@ const SkipCard = ({
             </div>
           )}
         </div>
-      )}
-      <img
-        src={SkipImg}
-        alt="skipImg"
-        className="rounded-lg h-[210px] w-full"
-      />
+      </div>
+
       <div className="">
         <h3 className="mt-5 text-xl">{size} Yard Skip</h3>
         <p className="text-text my-2">{hire_period_days} day hire period</p>
