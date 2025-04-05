@@ -10,23 +10,23 @@ This is a [React.js](https://react.dev/) project bootstrapped with [`create-vite
 
 ### 1. Install Project Dependencies
 
-``bash
+```bash
 npm install
 
 # or
 
 yarn install
-``
+```
 
 ### 2. Run the Development Server
 
-``bash
+```bash
 npm run dev
 
 # or
 
 yarn dev
-``
+```
 
 Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
