@@ -46,8 +46,8 @@ In this Vite + React setup:
 #### Benefits:
 
 - 🚀 **Fast initial page load** – static components don't wait for API responses.
-- 🔄 **Uninterruptible navigation** – users can interact with sections of the page while data is still loading.
 - ⏱️ **Non-blocking UI** – avoids waiting for all data before rendering the full page.
+- **Faster Perceived Loading Time** - Because static content is shown immediately, users perceive the page as loading faster. This can help avoid the "blank screen" experience where everything appears to be stuck while data loads.
 
 ### 🦴 Skeleton Loaders
 
