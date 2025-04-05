@@ -22,7 +22,7 @@ const SelectSkipSection = () => {
   }, []);
   if (loading) {
     return (
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[1.5rem] mb-[9rem] mt-[2.5rem]">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[1.5rem] mb-[9rem] mx-6 mt-[2.5rem]">
         {Array.from({ length: 6 }).map((_, i) => (
           <SkipCardSkeleton key={i} />
         ))}

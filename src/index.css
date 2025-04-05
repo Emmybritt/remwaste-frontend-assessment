@@ -38,6 +38,9 @@
   --sidebar-ring: oklch(0.708 0 0);
   --blue: #0037c1;
   --grey: #2a2a2a;
+  --danger: #a72d2d;
+  --warning: #e5af08;
+
 }
 
 .dark {
@@ -76,6 +79,8 @@
   --grey: #2a2a2a;
   --light-gray: #949494;
   --text: #979fab;
+  --danger: #8b2d2d;
+  --warning: #e5af08;
 }
 
 @theme inline {
@@ -118,6 +123,8 @@
   --color-grey: var(--grey);
   --color-light-grey: var(--light-gray);
   --color-text: var(--text);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
 }
 
 @layer base {

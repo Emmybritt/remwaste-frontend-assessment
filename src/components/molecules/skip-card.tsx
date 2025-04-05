@@ -2,7 +2,7 @@ import { Skip } from "@/domains/skip";
 import SkipImg from "@/assets/skipImg.jpeg";
 import Button from "../atoms/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, TriangleAlert } from "lucide-react";
 
 interface ISkipCard {
   skipSizeData: Skip;
@@ -15,7 +15,13 @@ const SkipCard = ({
   selectedSkipData,
   handleSelectSkip,
 }: ISkipCard) => {
-  const { size, hire_period_days, price_before_vat } = skipSizeData;
+  const {
+    size,
+    hire_period_days,
+    price_before_vat,
+    allowed_on_road,
+    allows_heavy_waste,
+  } = skipSizeData;
   return (
     <div
       onClick={() => handleSelectSkip(skipSizeData)}
@@ -27,6 +33,23 @@ const SkipCard = ({
       <p className="absolute bg-blue px-3 py-1 rounded-4xl text-sm font-semibold right-12 top-10">
         {size} Yards
       </p>
+      {(allowed_on_road || allows_heavy_waste) && (
+        <div className="absolute top-43 space-y-2">
+          {allowed_on_road && (
+            <div className="text-warning py-1 flex space-x-2 items-center bg-[#0c0c0c] text-xs rounded-sm px-2">
+              <TriangleAlert size={15} />
+              <p>Private Property Only</p>
+            </div>
+          )}
+
+          {allows_heavy_waste && (
+            <div className="text-danger py-1 space-x-2 flex items-center bg-[#0c0c0c] text-xs rounded-sm px-2">
+              <TriangleAlert size={15} />
+              <p>Not Suitable for Heavy Waste</p>
+            </div>
+          )}
+        </div>
+      )}
       <img
         src={SkipImg}
         alt="skipImg"

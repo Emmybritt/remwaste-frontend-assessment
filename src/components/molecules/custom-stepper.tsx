@@ -9,9 +9,10 @@ interface IStep {
 interface IStepper {
   currentStep: number;
   steps: IStep[];
+  stepRefs: React.RefObject<(HTMLDivElement | null)[]>;
 }
 
-const Stepper = ({ currentStep, steps }: IStepper) => {
+const Stepper = ({ currentStep, steps, stepRefs }: IStepper) => {
   const activeColor = (index: number) =>
     currentStep >= index ? "bg-blue" : "bg-grey";
   const activeTextColor = (index: number) =>
@@ -19,11 +20,16 @@ const Stepper = ({ currentStep, steps }: IStepper) => {
   const isFinalStep = (index: number) => index === steps.length - 1;
 
   return (
-    <div className="flex items-center w-full justify-center">
+    <div className="flex items-center w-full justify-start">
       {steps.map((step, index) => (
         <React.Fragment key={index}>
-          <div className="flex items-center gap-1">
-            {<step.icon className={activeTextColor(index)} />}
+          <div
+            className="flex items-center gap-1 min-w-max"
+            ref={(el) => {
+              stepRefs.current[index - 1] = el;
+            }}
+          >
+            <step.icon className={activeTextColor(index)} />
             <h3
               className={
                 currentStep >= index - 1
@@ -34,7 +40,7 @@ const Stepper = ({ currentStep, steps }: IStepper) => {
               {step.name}
             </h3>
           </div>
-          {isFinalStep(index) ? null : (
+          {!isFinalStep(index) && (
             <div className={`w-16 h-[1px] mx-4 ${activeColor(index)}`}></div>
           )}
         </React.Fragment>
