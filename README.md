@@ -99,32 +99,34 @@ All these platforms support deploying Vite apps with a `build` script that outpu
 
 ## 🛠️ Key Features & Improvements
 
-Redesign Approach
-Layout: The skip selection page was restructured to create a more intuitive flow. The skip options were displayed in a more user-friendly manner, ensuring clarity and ease of selection.
+### ✨ Redesign Approach
 
-UI/UX: Colors, typography, and spacing were adjusted for better readability and alignment with modern UI trends. Buttons were made larger for better clickability on mobile.
+- **Layout:** The skip selection page was restructured for a more intuitive flow. Skip options are now clearer and easier to interact with.
+- **UI/UX Enhancements:**
+  - Improved colors, typography, and spacing for better readability.
+  - Enlarged buttons for easier interaction, especially on mobile devices.
+  - Added hover and focus states for better interactivity.
+- **Accessibility:**
+  - Ensured sufficient color contrast.
+  - Included ARIA labels for form elements to support screen readers.
 
-Interactivity: Added hover and focus effects for buttons to improve interactivity.
+### 🧼 Clean & Maintainable React Code
 
-Accessibility: The design is now more accessible, with sufficient color contrast and ARIA labels for form elements.
+- **Component Structure:**
+  - Followed [Atomic Design](https://rjroopal.medium.com/atomic-design-pattern-structuring-your-react-application-970dd57520f8) for reusable and scalable components.
+- **State Management:**
+  - Used React hooks (`useState`, `useEffect`) to manage state with clear separation of concerns.
+- **Error Handling:**
+  - Wrapped async calls in `try...catch` blocks to prevent UI crashes and handle failures gracefully.
 
-Clean & Maintainable React Code
-Component Structure: Components were broken down using the atomic design principle. We ensured that the components are reusable and easy to maintain.
+### 📱 Responsiveness
 
-State Management: State is handled using React hooks like useState and useEffect, ensuring minimal boilerplate and clear separation of concerns.
+- **Mobile-First Design:** Optimized layout to adapt seamlessly across mobile, tablet, and desktop.
+- **Responsive Grid System:** Ensures consistent alignment and spacing across screen sizes.
+- **Cross-Device Testing:** Verified layout and behavior across various devices for consistent UX.
 
-Error Handling: Implemented graceful error handling for asynchronous data fetching to ensure the page doesn't break in case of API failures.
+### ⚡ UI & Performance Enhancements
 
-Responsiveness
-Mobile-First Design: The layout is designed to work seamlessly on both mobile and desktop devices. Media queries are used to adjust the layout based on screen size.
-
-Grid System: A flexible grid system is employed to ensure that the page scales well across different devices.
-
-Testing: The design has been tested on multiple devices to ensure that it is fully responsive and provides a consistent experience.
-
-UI/UX Enhancements
-Skeleton Loaders: Used skeleton loaders to improve the perceived loading speed for dynamic data fetching, ensuring a smooth user experience while waiting for the skips data.
-
-Asynchronous Data Loading: The skip options are fetched asynchronously, and loading states are managed to improve the user experience.
-
-Improved Visual Hierarchy: The typography and layout were improved to highlight key actions and make the selection process more intuitive.
+- **Skeleton Loaders:** Improve perceived speed by showing placeholders while data loads.
+- **Async Data Fetching:** Skip options are fetched dynamically; users receive immediate feedback through loading indicators.
+- **Visual Hierarchy:** Clean typography and layout guide the user toward key actions and simplify the decision-making process.
