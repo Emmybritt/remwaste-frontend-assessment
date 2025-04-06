@@ -108,7 +108,6 @@ All these platforms support deploying Vite apps with a `build` script that outpu
   - Added hover and focus states for better interactivity.
 - **Accessibility:**
   - Ensured sufficient color contrast.
-  - Included ARIA labels for form elements to support screen readers.
 
 ### 🧼 Clean & Maintainable React Code
 
