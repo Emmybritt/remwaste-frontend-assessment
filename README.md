@@ -47,7 +47,7 @@ In this Vite + React setup:
 
 - 🚀 **Fast initial page load** – static components don't wait for API responses.
 - ⏱️ **Non-blocking UI** – avoids waiting for all data before rendering the full page.
-- **Faster Perceived Loading Time** - Because static content is shown immediately, users perceive the page as loading faster. This can help avoid the "blank screen" experience where everything appears to be stuck while data loads.
+- 💨 **Faster Perceived Loading Time** - Because static content is shown immediately, users perceive the page as loading faster. This can help avoid the "blank screen" experience where everything appears to be stuck while data loads.
 
 ### 🦴 Skeleton Loaders
 
@@ -67,7 +67,7 @@ This ensures that:
 
 - Errors such as network failures or invalid responses are caught early.
 - The user experience isn't broken by unhandled exceptions.
-- A utility function is included to consistently extract and display error messages.
+- A utility function is included to consistently extract and display proper error messages.
 
 ---
 
@@ -76,7 +76,7 @@ This ensures that:
 This application follows a combination of:
 
 - **Domain-Driven Design (DDD)** – for logical separation of concerns
-- **Atomic Design principles** – for reusable and scalable component structure
+- **[Atomic Design principles](https://rjroopal.medium.com/atomic-design-pattern-structuring-your-react-application-970dd57520f8)** – for reusable and scalable component structure
 
 ---
 
