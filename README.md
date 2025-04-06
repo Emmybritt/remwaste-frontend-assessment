@@ -129,3 +129,11 @@ All these platforms support deploying Vite apps with a `build` script that outpu
 - **Skeleton Loaders:** Improve perceived speed by showing placeholders while data loads.
 - **Async Data Fetching:** Skip options are fetched dynamically; users receive immediate feedback through loading indicators.
 - **Visual Hierarchy:** Clean typography and layout guide the user toward key actions and simplify the decision-making process.
+
+### 🧭 Stepper Navigation Improvements
+
+- **Mobile-Friendly Header Stepper:**
+  - Enhanced the stepper design for small screens to improve usability.
+  - Focuses the user on the **current step**, reducing distractions.
+  - Introduced **horizontal scroll behavior** so users can explore and move steps easily.
+  - While not part of the original shared design, **horizontal scroll back to previous steps on mobile** was added for better control and flow.
